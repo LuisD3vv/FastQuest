@@ -2,21 +2,57 @@ body {
   background-color: #e5bb89;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
+  box-sizing: border-box;
   font-size: 62.5%;
 }
+
 .gentitle {
   text-align: center;
   margin: 1rem auto 1rem;
   width: 40rem;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
+  position: relative;
+  overflow: hidden;
 }
+
+.gentitle::before {
+  content: "Realiza la prueba en 30 segundos";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(to right, #d4b3b352, rgb(143, 143, 202));
+  transform: skewX(-20deg);
+  transition: left 0.5s;
+  transition: ease-out;
+}
+
+.gentitle:hover::before {
+  left: 100%;
+  transition: ease 3s;
+}
+
 .contenedor {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 70rem;
-  height: 80rem;
+  height: auto;
   background: linear-gradient(rgb(248, 85, 85) 50%, #e5bb89);
   margin: auto;
   padding: 1.5rem;
@@ -26,23 +62,27 @@ html {
   border-bottom: 5px solid rgb(255, 255, 255);
   border-bottom-right-radius: 15rem;
 }
+
 .contenedor:active {
   box-shadow: 0px 0px 4px 4px gold;
   border-bottom-right-radius: 10rem;
   transition: ease 3s;
 }
+
 .rellenar {
   text-align: center;
   width: 30%;
   border-radius: 5px;
   margin: auto;
 }
+
 .Qtions {
   border-radius: 15px;
   width: auto;
   margin-bottom: auto;
   padding: 1rem;
 }
+
 .Qtions p {
   text-shadow: unset;
   text-transform: capitalize;
@@ -50,6 +90,7 @@ html {
   letter-spacing: 4px;
   font-size: 14px;
 }
+
 .temporizador {
   margin-top: 17px;
   margin-bottom: auto;
@@ -61,12 +102,15 @@ html {
   border-right: 5px solid rgb(255, 255, 255);
   border-radius: 5px;
 }
+
 .temporizador:hover {
   box-shadow: 0px 0px 4px 4px rgb(0, 0, 0);
 }
+
 .temporizador:active {
   box-shadow: 0px 0px 4px 4px rgb(0, 0, 0);
 }
+
 .title_temp {
   text-align: center;
   height: auto;
@@ -77,36 +121,64 @@ html {
   border-radius: 5px;
   font-size: 20px;
 }
+
 .descrip {
   font-size: 13px;
   font-weight: bold;
 }
+
 .campo {
   font-size: 13px;
-  background: linear-gradient(
-    to top,
-    rgb(234, 213, 173),
-    rgb(247, 105, 105) 90%
-  );
+  background: linear-gradient(to top,
+      rgb(234, 213, 173),
+      rgb(247, 105, 105) 90%);
   padding: 0.5rem;
   margin: 1rem auto;
-  height: 12rem;
+  height: auto;
   width: auto;
   border-radius: 5px;
   border-bottom: 5px solid black;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-right: 4px solid rgb(247, 247, 247);
-  cursor: pointer; /*Interesante*/
+  cursor: pointer;
+  /*Interesante*/
 }
+
 .campo:hover {
   box-shadow: 0px 0px 2px 2px black;
   /* transform: rotate(5deg); */
 }
+
 .campo:active {
   box-shadow: 0px 0px 4px 4px gold;
 }
+
+.button_bg {
+  background: linear-gradient(to right, #f91616, blue);
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  height: 70px;
+  margin-top: 15px;
+}
+
+.boton {
+  letter-spacing: 3px;
+  width: 50%;
+  padding: 10px;
+  color: #000;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
+}
+
 button {
+  position: relative;
+  overflow: hidden;
   padding: 10px;
   width: 100%;
   padding: 10px;
@@ -118,6 +190,31 @@ button {
   box-shadow: 3px 4px 3px 2px rgb(164, 157, 157);
   border: medium;
 }
+
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(rgb(214, 214, 40), rgba(209, 58, 58, 0.26));
+  transform: skewX(-20deg);
+  transition: left 0.5s;
+}
+
+button:hover::after {
+  left: 100%;
+}
+
+button:focus {
+  outline: none;
+  border: none;
+  border-right: 3px solid whitesmoke;
+  border-left: 3px solid whitesmoke;
+  border-radius: 15px;
+}
+
 button:active {
   max-height: 30px;
   border-color: yellow;
@@ -125,6 +222,7 @@ button:active {
   border-width: 1px;
   box-shadow: none;
 }
+
 input {
   margin-top: 11px;
   display: block;
@@ -135,23 +233,18 @@ input {
   border-top: 5px solid white;
   border-right: 5px solid white;
 }
-input:focus {
-  border-left: 3px solid yellowgreen;
-  border-bottom: 3px solid yellowgreen;
-  border-top: 1px solid white;
-}
+
 label {
-  border-radius: 5px;
   background-color: rgb(255, 255, 255);
   border: solid 2px black;
   padding: 4px;
   font-weight: bold;
-  color: rgb(0, 0, 0);
-  letter-spacing: 2px;
   border: 5px solid white;
   border-top: 2px solid rgb(0, 0, 0);
   border-left: 2px solid rgb(0, 0, 0);
+  font-size: 15px;
 }
+
 .campo h3 {
   background-color: rgb(234, 255, 0);
   width: 9rem;
@@ -160,10 +253,11 @@ label {
   font-size: 13px;
   text-transform: capitalize;
   border-radius: 5px;
-  height: 20px;
+  height: auto;
   border-bottom: 2px solid rgb(0, 0, 0);
   border-right: 2px solid rgb(0, 0, 0);
 }
+
 .areaTemp {
   margin: auto;
   width: 18rem;
@@ -172,11 +266,13 @@ label {
   padding: 1rem;
   border-radius: 5px;
 }
+
 p {
   text-align: center;
   color: rgb(0, 0, 0);
   font-weight: 600;
 }
+
 .section_tempo {
   text-align: center;
   width: 10rem;
@@ -187,147 +283,113 @@ p {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
 }
+
 .Comentarios {
   width: 3rem;
   height: 3rem;
   background-color: red;
 }
+
 .gratefoul {
   text-align: center;
   font-size: 15px;
 }
+
 span {
   color: rgba(129, 0, 250, 0.993);
 }
 
 /*media queries telefono*/
-@media screen and (max-width: 660px) {
+@media (max-width: 45rem) {
   .contenedor {
-    margin: 0 auto;
+    width: 95%;
     grid-template-columns: 1fr;
-    width: 90%;
-    max-width: 37rem;
-    height: auto;
-    box-shadow: 0px 0px 2px 3px BLACK;
-    background: linear-gradient(#e5bb89 5%, rgb(248, 85, 85) 90%);
-      border-bottom-right-radius: unset;
+    border-radius: unset;
+    border: 5px solid rgb(255, 255, 255);
 
   }
+
   .temporizador {
-    width: 93%;
-    background: rgb(238, 91, 91);
     order: -1;
-    border: unset;
-    max-height: 29rem;
-    position: sticky;
-    top: 1rem;
-    border: 3px solid black;
-  }
-  .temporizador:hover {
-    box-shadow: unset;
-  }
-  .temporizador:active {
-    box-shadow: unset;
-  }
-  .section_tempo {
-    width: 70%;
-  }
-  .Qtions {
-    margin: 0 auto;
-    width: 95%;
-  }
-  .campo {
-    width: auto;
     height: auto;
-    border-left: 5px solid rgb(255, 255, 255);
-    border-right: 5px solid rgb(255, 255, 255);
-    border-bottom: 5px solid rgb(255, 255, 255);
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    border-top: 5px solid black;
   }
-  .campo:hover {
-    box-shadow: unset;
-    /* transform: rotate(5deg); */
+
+  .campo {
+    font-size: 13px;
+    background: linear-gradient(to top,
+        rgb(234, 213, 173),
+        rgba(196, 148, 148, 0) 90%);
+    border-radius: 5px;
+    border-bottom: 5px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-right: 5px solid whitesmoke;
+    border-left: 5px solid whitesmoke;
+    cursor: pointer;
+    /*Interesante*/
   }
+  .campo label {
+    border-radius: 5px;
+    margin: 5rem 1rem;
+    border: unset;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.384);
+    box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+    color: #110101;
+    font-size: 95%;
+  }
+.centrar{
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+  label:hover {
+    box-shadow: 0px 0px 2px 2px rgb(255, 255, 255);
+  }
+
   input {
-    width: auto;
-    margin-top: 1rem;
-    border-right: 2px solid black;
-  }
-  label {
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    padding: 1rem;
-    font-size: 13px;
-    border-right: 2px solid black;
-  }
-  .campo h3 {
-    letter-spacing: 5px;
-    margin-bottom: 5rem;
-    background-color: rgb(234, 255, 0);
+    margin: 3rem auto;
     width: 95%;
-    padding: 0.5rem;
-    font-size: 13px;
-    text-transform: capitalize;
-    border-top: 3px solid black;
-    border-radius: 5px;
+    padding: 15px;
+    height: 7rem;
+    border: unset;
+    border-bottom: 3px solid grey;
   }
-  .title_temp {
-    background-color: unset;
-    box-shadow: unset;
+
+  input:hover {
+    box-shadow: 0px 0px 5px 2px grey;
   }
-  .bakchelp {
-    width: 90%;
-    margin: auto;
-    margin-bottom: 1rem;
-    border-radius: 5px;
+
+  .gentitle {
+    width: 95%;
+    padding: 5px;
   }
-  .Reiniciar {
-    padding: 1.52rem;
-  }
-  .Reiniciar:active {
-    padding: unset;
-    height: unset;
-    border-color: yellow;
-    margin-top: unset;
-    border-width: unset;
-    box-shadow: none;
-    max-height: 30px;
-    margin-top: 5px;
-    border-width: 1px;
+  button {
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 4px 3px 2px rgb(164, 157, 157);
+    height: 5rem;
+    max-height: 7rem;
   }
   button:active {
-    max-height: 30px;
+    max-height: 40px;
     border-color: yellow;
-    margin-top: 5px;
+    margin-top: 10px;
     border-width: 1px;
     box-shadow: none;
   }
-  .centrar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .campo h3 {
+    background-color: rgb(234, 255, 0);
     width: 100%;
-  }
-  input::placeholder {
-    letter-spacing: 1px;
+    text-align: center;
+    font-size: 13px;
     text-transform: capitalize;
-    text-shadow: 0px 0px 1px black;
+    border-radius: 5px;
+    height: 45px;
+    padding: 10px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    border-right: 2px solid rgb(0, 0, 0);
+    margin-bottom: 3rem;
   }
-  .finalizar {
-    width: 100%;
-  }
-}
-
-/*media querie Tablet*/
-@media screen and (min-width: 660px) and (max-width: 1080px) {
-    .contenedor {
-    grid-template-columns: 1fr 1fr;
-     border-bottom-right-radius: unset;
-
-}
-
 }
