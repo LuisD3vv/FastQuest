@@ -235,6 +235,7 @@ input {
   border-top: 5px solid white;
   border-right: 5px solid white;
 }
+
 input:focus {
   outline: none;
 }
@@ -261,6 +262,7 @@ input:focus {
   padding: 1rem;
   border-radius: 5px;
 }
+
 .section_tempo {
   text-align: center;
   width: 10rem;
@@ -291,15 +293,20 @@ span {
 @media (max-width: 45rem) {
   .contenedor {
     width: 95%;
+    max-width: auto;
     grid-template-columns: 1fr;
     border-radius: unset;
     border: 5px solid rgb(255, 255, 255);
-
+    margin: 0 auto;
+    padding: 1rem;
   }
 
   .temporizador {
+    margin: 0 auto;
+
     order: -1;
     height: auto;
+    width: 95%;
   }
 
   .campo {
@@ -314,8 +321,10 @@ span {
     border-right: 5px solid whitesmoke;
     border-left: 5px solid whitesmoke;
     cursor: pointer;
+    width: 95%;
     /*Interesante*/
   }
+
   .campo p {
     border-radius: 5px;
     margin: 5rem 1rem;
@@ -326,11 +335,12 @@ span {
     color: #110101;
     font-size: 15px;
   }
-.centrar{
-  padding: 1rem;
-  height: 100%;
-  width: 100%;
-}
+
+  .centrar {
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+  }
 
   label:hover {
     box-shadow: 0px 0px 2px 2px rgb(255, 255, 255);
@@ -353,6 +363,7 @@ span {
     width: 95%;
     padding: 5px;
   }
+
   button {
     font-weight: bold;
     cursor: pointer;
@@ -360,6 +371,7 @@ span {
     height: 5rem;
     max-height: 7rem;
   }
+
   button:active {
     max-height: 40px;
     border-color: yellow;
@@ -367,6 +379,7 @@ span {
     border-width: 1px;
     box-shadow: none;
   }
+
   .campo h3 {
     background-color: rgb(234, 255, 0);
     width: 100%;
@@ -379,5 +392,13 @@ span {
     border-bottom: 2px solid rgb(0, 0, 0);
     border-right: 2px solid rgb(0, 0, 0);
     margin-bottom: 3rem;
+  }
+
+  .Qtions p {
+    font-size: 16px;
+    width: auto;
+    border-left: 5px solid black;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.384);
   }
 }
