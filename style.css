@@ -87,8 +87,10 @@ html {
   text-shadow: unset;
   text-transform: capitalize;
   font-weight: bold;
-  letter-spacing: 4px;
   font-size: 14px;
+  width: 95%;
+  border-left: 5px solid black;
+  padding: 10px;
 }
 
 .temporizador {
@@ -135,7 +137,7 @@ html {
   padding: 0.5rem;
   margin: 1rem auto;
   height: auto;
-  width: auto;
+  width: 35rem;
   border-radius: 5px;
   border-bottom: 5px solid black;
   border-bottom-left-radius: 10px;
@@ -228,22 +230,15 @@ input {
   display: block;
   border-radius: 5px;
   padding: 9px;
-  width: 25rem;
+  width: 28rem;
   border: solid 2px black;
   border-top: 5px solid white;
   border-right: 5px solid white;
 }
-
-label {
-  background-color: rgb(255, 255, 255);
-  border: solid 2px black;
-  padding: 4px;
-  font-weight: bold;
-  border: 5px solid white;
-  border-top: 2px solid rgb(0, 0, 0);
-  border-left: 2px solid rgb(0, 0, 0);
-  font-size: 15px;
+input:focus {
+  outline: none;
 }
+
 
 .campo h3 {
   background-color: rgb(234, 255, 0);
@@ -266,13 +261,6 @@ label {
   padding: 1rem;
   border-radius: 5px;
 }
-
-p {
-  text-align: center;
-  color: rgb(0, 0, 0);
-  font-weight: 600;
-}
-
 .section_tempo {
   text-align: center;
   width: 10rem;
@@ -328,7 +316,7 @@ span {
     cursor: pointer;
     /*Interesante*/
   }
-  .campo label {
+  .campo p {
     border-radius: 5px;
     margin: 5rem 1rem;
     border: unset;
@@ -336,7 +324,7 @@ span {
     background-color: rgba(255, 255, 255, 0.384);
     box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
     color: #110101;
-    font-size: 95%;
+    font-size: 15px;
   }
 .centrar{
   padding: 1rem;
