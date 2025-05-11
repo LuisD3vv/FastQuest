@@ -1,0 +1,333 @@
+body {
+  background-color: #e5bb89;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+.gentitle {
+  text-align: center;
+  margin: 1rem auto 1rem;
+  width: 40rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 70rem;
+  height: 80rem;
+  background: linear-gradient(rgb(248, 85, 85) 50%, #e5bb89);
+  margin: auto;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: ease-in-out 1s;
+  border-right: 5px solid rgb(255, 255, 255);
+  border-bottom: 5px solid rgb(255, 255, 255);
+  border-bottom-right-radius: 15rem;
+}
+.contenedor:active {
+  box-shadow: 0px 0px 4px 4px gold;
+  border-bottom-right-radius: 10rem;
+  transition: ease 3s;
+}
+.rellenar {
+  text-align: center;
+  width: 30%;
+  border-radius: 5px;
+  margin: auto;
+}
+.Qtions {
+  border-radius: 15px;
+  width: auto;
+  margin-bottom: auto;
+  padding: 1rem;
+}
+.Qtions p {
+  text-shadow: unset;
+  text-transform: capitalize;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-size: 14px;
+}
+.temporizador {
+  margin-top: 17px;
+  margin-bottom: auto;
+  width: auto;
+  padding: 1rem;
+  background: linear-gradient(to bottom, gold 30%, rgb(247, 105, 105));
+  height: auto;
+  border-bottom: 5px solid black;
+  border-right: 5px solid rgb(255, 255, 255);
+  border-radius: 5px;
+}
+.temporizador:hover {
+  box-shadow: 0px 0px 4px 4px rgb(0, 0, 0);
+}
+.temporizador:active {
+  box-shadow: 0px 0px 4px 4px rgb(0, 0, 0);
+}
+.title_temp {
+  text-align: center;
+  height: auto;
+  width: 65%;
+  padding: 5px;
+  margin: auto;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.descrip {
+  font-size: 13px;
+  font-weight: bold;
+}
+.campo {
+  font-size: 13px;
+  background: linear-gradient(
+    to top,
+    rgb(234, 213, 173),
+    rgb(247, 105, 105) 90%
+  );
+  padding: 0.5rem;
+  margin: 1rem auto;
+  height: 12rem;
+  width: auto;
+  border-radius: 5px;
+  border-bottom: 5px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-right: 4px solid rgb(247, 247, 247);
+  cursor: pointer; /*Interesante*/
+}
+.campo:hover {
+  box-shadow: 0px 0px 2px 2px black;
+  /* transform: rotate(5deg); */
+}
+.campo:active {
+  box-shadow: 0px 0px 4px 4px gold;
+}
+button {
+  padding: 10px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  cursor: pointer;
+  box-shadow: 3px 4px 3px 2px rgb(164, 157, 157);
+  border: medium;
+}
+button:active {
+  max-height: 30px;
+  border-color: yellow;
+  margin-top: 5px;
+  border-width: 1px;
+  box-shadow: none;
+}
+input {
+  margin-top: 11px;
+  display: block;
+  border-radius: 5px;
+  padding: 9px;
+  width: 25rem;
+  border: solid 2px black;
+  border-top: 5px solid white;
+  border-right: 5px solid white;
+}
+input:focus {
+  border-left: 3px solid yellowgreen;
+  border-bottom: 3px solid yellowgreen;
+  border-top: 1px solid white;
+}
+label {
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  border: solid 2px black;
+  padding: 4px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+  border: 5px solid white;
+  border-top: 2px solid rgb(0, 0, 0);
+  border-left: 2px solid rgb(0, 0, 0);
+}
+.campo h3 {
+  background-color: rgb(234, 255, 0);
+  width: 9rem;
+  margin: 10px 0px 2rem auto;
+  text-align: center;
+  font-size: 13px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  height: 20px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  border-right: 2px solid rgb(0, 0, 0);
+}
+.areaTemp {
+  margin: auto;
+  width: 18rem;
+  height: 5rem;
+  margin-bottom: 16px;
+  padding: 1rem;
+  border-radius: 5px;
+}
+p {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
+.section_tempo {
+  text-align: center;
+  width: 10rem;
+  margin: 0 auto;
+  box-shadow: 0px 0px 6px 1px rgb(255, 0, 0);
+  border-radius: 5px;
+  padding: 2px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+.Comentarios {
+  width: 3rem;
+  height: 3rem;
+  background-color: red;
+}
+.gratefoul {
+  text-align: center;
+  font-size: 15px;
+}
+span {
+  color: rgba(129, 0, 250, 0.993);
+}
+
+/*media queries telefono*/
+@media screen and (max-width: 660px) {
+  .contenedor {
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    width: 90%;
+    max-width: 37rem;
+    height: auto;
+    box-shadow: 0px 0px 2px 3px BLACK;
+    background: linear-gradient(#e5bb89 5%, rgb(248, 85, 85) 90%);
+      border-bottom-right-radius: unset;
+
+  }
+  .temporizador {
+    width: 93%;
+    background: rgb(238, 91, 91);
+    order: -1;
+    border: unset;
+    max-height: 29rem;
+    position: sticky;
+    top: 1rem;
+    border: 3px solid black;
+  }
+  .temporizador:hover {
+    box-shadow: unset;
+  }
+  .temporizador:active {
+    box-shadow: unset;
+  }
+  .section_tempo {
+    width: 70%;
+  }
+  .Qtions {
+    margin: 0 auto;
+    width: 95%;
+  }
+  .campo {
+    width: auto;
+    height: auto;
+    border-left: 5px solid rgb(255, 255, 255);
+    border-right: 5px solid rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(255, 255, 255);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top: 5px solid black;
+  }
+  .campo:hover {
+    box-shadow: unset;
+    /* transform: rotate(5deg); */
+  }
+  input {
+    width: auto;
+    margin-top: 1rem;
+    border-right: 2px solid black;
+  }
+  label {
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 1rem;
+    font-size: 13px;
+    border-right: 2px solid black;
+  }
+  .campo h3 {
+    letter-spacing: 5px;
+    margin-bottom: 5rem;
+    background-color: rgb(234, 255, 0);
+    width: 95%;
+    padding: 0.5rem;
+    font-size: 13px;
+    text-transform: capitalize;
+    border-top: 3px solid black;
+    border-radius: 5px;
+  }
+  .title_temp {
+    background-color: unset;
+    box-shadow: unset;
+  }
+  .bakchelp {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  .Reiniciar {
+    padding: 1.52rem;
+  }
+  .Reiniciar:active {
+    padding: unset;
+    height: unset;
+    border-color: yellow;
+    margin-top: unset;
+    border-width: unset;
+    box-shadow: none;
+    max-height: 30px;
+    margin-top: 5px;
+    border-width: 1px;
+  }
+  button:active {
+    max-height: 30px;
+    border-color: yellow;
+    margin-top: 5px;
+    border-width: 1px;
+    box-shadow: none;
+  }
+  .centrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+  input::placeholder {
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-shadow: 0px 0px 1px black;
+  }
+  .finalizar {
+    width: 100%;
+  }
+}
+
+/*media querie Tablet*/
+@media screen and (min-width: 660px) and (max-width: 1080px) {
+    .contenedor {
+    grid-template-columns: 1fr 1fr;
+     border-bottom-right-radius: unset;
+
+}
+
+}
