@@ -1,404 +1,303 @@
 body {
-  background-color: #e5bb89;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-.gentitle {
-  text-align: center;
-  margin: 1rem auto 1rem;
-  width: 40rem;
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-}
-
-.gentitle::before {
-  content: "Realiza la prueba en 30 segundos";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  background: linear-gradient(to right, #d4b3b352, rgb(143, 143, 202));
-  transform: skewX(-20deg);
-  transition: left 0.5s;
-  transition: ease-out;
-}
-
-.gentitle:hover::before {
-  left: 100%;
-  transition: ease 3s;
-}
-
-.contenedor {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 70rem;
-  height: auto;
-  background: linear-gradient(rgb(248, 85, 85) 50%, #e5bb89);
-  margin: auto;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  transition: ease-in-out 1s;
-  border-right: 5px solid rgb(255, 255, 255);
-  border-bottom: 5px solid rgb(255, 255, 255);
-  border-bottom-right-radius: 15rem;
-}
-
-.contenedor:active {
-  box-shadow: 0px 0px 4px 4px gold;
-  border-bottom-right-radius: 10rem;
-  transition: ease 3s;
-}
-
-.rellenar {
-  text-align: center;
-  width: 30%;
-  border-radius: 5px;
-  margin: auto;
-}
-
-.Qtions {
-  border-radius: 15px;
-  width: auto;
-  margin-bottom: auto;
-  padding: 1rem;
-}
-
-.Qtions p {
-  text-shadow: unset;
-  text-transform: capitalize;
-  font-weight: bold;
-  font-size: 14px;
-  width: 95%;
-  border-left: 5px solid black;
-  padding: 10px;
-}
-
-.temporizador {
-  margin-top: 17px;
-  margin-bottom: auto;
-  width: auto;
-  padding: 1rem;
-  background: linear-gradient(to bottom, gold 30%, rgb(247, 105, 105));
-  height: auto;
-  border-bottom: 5px solid black;
-  border-right: 5px solid rgb(255, 255, 255);
-  border-radius: 5px;
-}
-
-.temporizador:hover {
-  box-shadow: 0px 0px 4px 4px rgb(0, 0, 0);
-}
-
-.temporizador:active {
-  box-shadow: 0px 0px 4px 4px rgb(0, 0, 0);
-}
-
-.title_temp {
-  text-align: center;
-  height: auto;
-  width: 65%;
-  padding: 5px;
-  margin: auto;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  font-size: 20px;
-}
-
-.descrip {
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.campo {
-  font-size: 13px;
-  background: linear-gradient(to top,
-      rgb(234, 213, 173),
-      rgb(247, 105, 105) 90%);
-  padding: 0.5rem;
-  margin: 1rem auto;
-  height: auto;
-  width: 35rem;
-  border-radius: 5px;
-  border-bottom: 5px solid black;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-right: 4px solid rgb(247, 247, 247);
-  cursor: pointer;
-  /*Interesante*/
-}
-
-.campo:hover {
-  box-shadow: 0px 0px 2px 2px black;
-  /* transform: rotate(5deg); */
-}
-
-.campo:active {
-  box-shadow: 0px 0px 4px 4px gold;
-}
-
-.button_bg {
-  background: linear-gradient(to right, #f91616, blue);
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  padding: 10px;
-  justify-content: center;
-  height: 70px;
-  margin-top: 15px;
-}
-
-.boton {
-  letter-spacing: 3px;
-  width: 50%;
-  padding: 10px;
-  color: #000;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
-}
-
-button {
-  position: relative;
-  overflow: hidden;
-  padding: 10px;
-  width: 100%;
-  padding: 10px;
-  border-radius: 10px;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 3px;
-  cursor: pointer;
-  box-shadow: 3px 4px 3px 2px rgb(164, 157, 157);
-  border: medium;
-}
-
-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(rgb(214, 214, 40), rgba(209, 58, 58, 0.26));
-  transform: skewX(-20deg);
-  transition: left 0.5s;
-}
-
-button:hover::after {
-  left: 100%;
-}
-
-button:focus {
-  outline: none;
-  border: none;
-  border-right: 3px solid whitesmoke;
-  border-left: 3px solid whitesmoke;
-  border-radius: 15px;
-}
-
-button:active {
-  max-height: 30px;
-  border-color: yellow;
-  margin-top: 5px;
-  border-width: 1px;
-  box-shadow: none;
-}
-
-input {
-  margin-top: 11px;
-  display: block;
-  border-radius: 5px;
-  padding: 9px;
-  width: 28rem;
-  border: solid 2px black;
-  border-top: 5px solid white;
-  border-right: 5px solid white;
-}
-
-input:focus {
-  outline: none;
-}
-
-
-.campo h3 {
-  background-color: rgb(234, 255, 0);
-  width: 9rem;
-  margin: 10px 0px 2rem auto;
-  text-align: center;
-  font-size: 13px;
-  text-transform: capitalize;
-  border-radius: 5px;
-  height: auto;
-  border-bottom: 2px solid rgb(0, 0, 0);
-  border-right: 2px solid rgb(0, 0, 0);
-}
-
-.areaTemp {
-  margin: auto;
-  width: 18rem;
-  height: 5rem;
-  margin-bottom: 16px;
-  padding: 1rem;
-  border-radius: 5px;
-}
-
-.section_tempo {
-  text-align: center;
-  width: 10rem;
-  margin: 0 auto;
-  box-shadow: 0px 0px 6px 1px rgb(255, 0, 0);
-  border-radius: 5px;
-  padding: 2px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-}
-
-.Comentarios {
-  width: 3rem;
-  height: 3rem;
-  background-color: red;
-}
-
-.gratefoul {
-  text-align: center;
-  font-size: 15px;
-}
-
-span {
-  color: rgba(129, 0, 250, 0.993);
-}
-
-/*media queries telefono*/
-@media (max-width: 45rem) {
+    background-color: #e5bb89;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  
+  .gentitle {
+    text-align: center;
+    margin: 1rem auto 1rem;
+    width: max-content;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gentitle::before {
+    content: "Realiza la prueba en 30 segundos";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(to right, #d4b3b352, rgb(143, 143, 202));
+    transform: skewX(-20deg);
+    transition: left 0.5s;
+    transition: ease-out;
+  }
+  
+  .gentitle:hover::before {
+    left: 100%;
+    transition: ease 3s;
+  }
+  
   .contenedor {
-    width: 95%;
-    max-width: auto;
-    grid-template-columns: 1fr;
-    border-radius: unset;
-    border: 5px solid rgb(255, 255, 255);
-    margin: 0 auto;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: min(90rem,95%);
+    justify-content: space-around;
+    height: max-content;
+    background: linear-gradient(rgb(248, 85, 85) 50%, #e5bb89);
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: ease-in-out 1s;
+ 
+  }
+  
+  .contenedor:active {
+    box-shadow: 0px 0px 4px 4px gold;
+    border-bottom-right-radius: 10rem;
+    transition: ease 3s;
+  }
+  
+  .rellenar {
+    text-align: center;
+    width: 30%;
+    border-radius: 5px;
+    margin: auto;
+  }
+  
+  .Qtions {
+    display: flex;
+    flex-wrap: wrap;gap: 1rem;
+    border-radius: 5px;
+    width: max-content;
+    margin-bottom: auto;
     padding: 1rem;
   }
-
-  .temporizador {
-    margin: 0 auto;
-
-    order: -1;
-    height: auto;
+  
+  .Qtions p {
+    text-shadow: unset;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 14px;
     width: 95%;
+    border-left: 5px solid black;
+    padding: 10px;
   }
-
+  
+  .temporizador {
+    margin-top: 17px;
+    margin-bottom: auto;
+    width: auto;
+    padding: 1rem;
+    background: linear-gradient(to bottom, gold 30%, rgb(247, 105, 105));
+    height: auto;
+    border-bottom: 5px solid black;
+    border-radius: 5px;
+  }
+  
+  .temporizador:hover {
+    box-shadow: 0px 0px 4px 4px rgb(0, 0, 0);
+  }
+  
+  .temporizador:active {
+    box-shadow: 0px 0px 4px 4px rgb(0, 0, 0);
+  }
+  
+  .title_temp {
+    text-align: center;
+    height: auto;
+    width: 65%;
+    padding: 5px;
+    margin: auto;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  
+  .descrip {
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
   .campo {
     font-size: 13px;
     background: linear-gradient(to top,
         rgb(234, 213, 173),
-        rgba(196, 148, 148, 0) 90%);
+        rgb(247, 105, 105) 90%);
+    padding: 0.5rem;
+    margin: 1rem auto;
+    height: auto;
+    flex: 1 1  auto;
     border-radius: 5px;
     border-bottom: 5px solid black;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    border-right: 5px solid whitesmoke;
-    border-left: 5px solid whitesmoke;
+    border-right: 4px solid rgb(247, 247, 247);
     cursor: pointer;
-    width: 95%;
     /*Interesante*/
   }
-
-  .campo p {
-    border-radius: 5px;
-    margin: 5rem 1rem;
-    border: unset;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.384);
-    box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
-    color: #110101;
-    font-size: 15px;
+  
+  .campo:hover {
+    box-shadow: 0px 0px 2px 2px black;
+    /* transform: rotate(5deg); */
   }
-
-  .centrar {
-    padding: 1rem;
-    height: 100%;
+  
+  .campo:active {
+    box-shadow: 0px 0px 4px 4px gold;
+  }
+  
+  .button_bg {
+    background: linear-gradient(to right, #f91616, blue);
+    margin: 0 auto;
     width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    height: 70px;
+    margin-top: 15px;
   }
-
-  label:hover {
-    box-shadow: 0px 0px 2px 2px rgb(255, 255, 255);
+  
+  .boton {
+    letter-spacing: 3px;
+    width: 50%;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
   }
-
-  input {
-    margin: 3rem auto;
-    width: 95%;
-    padding: 15px;
-    height: 7rem;
-    border: unset;
-    border-bottom: 3px solid grey;
-  }
-
-  input:hover {
-    box-shadow: 0px 0px 5px 2px grey;
-  }
-
-  .gentitle {
-    width: 95%;
-    padding: 5px;
-  }
-
+  
   button {
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem;
+    width: 100%;
+    height: max-content;
+    border-radius: 5px;
+    text-transform: uppercase;
     font-weight: bold;
+    letter-spacing: 3px;
     cursor: pointer;
     box-shadow: 3px 4px 3px 2px rgb(164, 157, 157);
-    height: 5rem;
-    max-height: 7rem;
+    border: medium;
   }
-
+  
+  button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(rgb(214, 214, 40), rgba(209, 58, 58, 0.26));
+    transform: skewX(-20deg);
+    transition: left 0.5s;
+  }
+  
+  button:hover::after {
+    left: 100%;
+  }
+  
+  button:focus {
+    outline: none;
+    border: none;
+    border-right: 3px solid whitesmoke;
+    border-left: 3px solid whitesmoke;
+  }
+  
   button:active {
-    max-height: 40px;
     border-color: yellow;
-    margin-top: 10px;
-    border-width: 1px;
-    box-shadow: none;
+    transform: scale(.95);
   }
-
+  
+  input {
+    margin-top: 11px;
+    display: block;
+    border-radius: 5px;
+    padding: 9px;
+    width: 28rem;
+    border: solid 2px black;
+    border-top: 5px solid white;
+    border-right: 5px solid white;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  
   .campo h3 {
     background-color: rgb(234, 255, 0);
-    width: 100%;
+    width: max-content;
+    padding: 1rem;
+    margin: 10px 0px 2rem auto;
     text-align: center;
     font-size: 13px;
     text-transform: capitalize;
     border-radius: 5px;
-    height: 45px;
-    padding: 10px;
+    height: auto;
     border-bottom: 2px solid rgb(0, 0, 0);
     border-right: 2px solid rgb(0, 0, 0);
-    margin-bottom: 3rem;
   }
-
-  .Qtions p {
-    font-size: 16px;
-    width: auto;
-    border-left: 5px solid black;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.384);
+  
+  .areaTemp {
+    margin: auto;
+    width: 18rem;
+    height: 5rem;
+    margin-bottom: 16px;
+    padding: 1rem;
+    border-radius: 5px;
   }
+  
+  .section_tempo {
+    text-align: center;
+    width: 10rem;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: .5rem;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+  
+  .Comentarios {
+    width: 3rem;
+    height: 3rem;
+    background-color: red;
+  }
+  
+  .gratefoul {
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  span {
+    color: rgba(129, 0, 250, 0.993);
+  }
+@media (max-width: 40rem) {
+    .temporizador {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        order: -1;
+        width: 95%;
+        height: max-content;
+        margin-bottom: 1rem;
+    }
+    .section_tempo {
+        padding: 2rem;
+    }
 }
+  
