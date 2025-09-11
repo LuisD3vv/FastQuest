@@ -58,7 +58,7 @@ body {
     justify-content: space-around;
     height: max-content;
     background: linear-gradient(rgb(248, 85, 85) 50%, #e5bb89);
-    margin: auto;
+    margin: 3rem auto;
     padding: 1rem;
     border-radius: 1rem;
     transition: ease-in-out 1s;
@@ -98,9 +98,10 @@ body {
   }
   
   .temporizador {
+    order: -1;
     margin-top: 17px;
     margin-bottom: auto;
-    width: auto;
+    width: 40rem;
     padding: 1rem;
     background: linear-gradient(to bottom, gold 30%, rgb(247, 105, 105));
     height: auto;
