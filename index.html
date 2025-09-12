@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <title>Proyecto Dia 3</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-    <!--Javascript relink-->
+    <meta name="description" content="Pagina de el proyecto de un curso, un mini reto de preguntas>
+    <meta name="keywords" content="temp quest fast resolver preguntas respuestas ganador">
+    <metaa name="author" content="LissandroD3v">
+    <link rel="stylesheet" href="styles.css">
   </head>
-  <body onload="comenzarReloj()">
+  <body>
     <div class="rellenar">
       <audio id="audioAlarma">
         <source src="audio/gameover.mp3" type="audio/mpeg" />
@@ -18,7 +22,6 @@
     <section class="title">
       <h1 class="gentitle">Fast Quest en 30 segundos</h1>
     </section>
-
     <div class="contenedor">
       <section class="Qtions">
         <div class="campo">
@@ -30,6 +33,7 @@
               id="pre1"
               name="pre1"
               placeholder="ingresa tu repuesta."
+              autocomplete="off"
             />
           </div>
         </div>
@@ -42,6 +46,7 @@
               id="pre2"
               name="pre2"
               placeholder="ingresa tu repuesta."
+              autocomplete="off"
             />
           </div>
         </div>
@@ -54,6 +59,7 @@
               id="pre3"
               name="pre3"
               placeholder="ingresa tu repuesta."
+              autocomplete="off"
             />
           </div>
         </div>
@@ -66,6 +72,7 @@
               id="pre4"
               name="pre4"
               placeholder="ingresa tu repuesta."
+              autocomplete="off"
             />
           </div>
         </div>
@@ -78,12 +85,30 @@
               id="pre5"
               name="pre5"
               placeholder="ingresa tu repuesta."
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <div class="campo">
+          <h3>pregunta 6</h3>
+          <div class="centrar">
+            <p  class="contenido_pregunta" for="pre5">¿De que pais es el ceviche?</p>
+            <input
+              type="text"
+              id="pre6"
+              name="pre6"
+              placeholder="ingresa tu repuesta."
+              autocomplete="off"
             />
           </div>
         </div>
         <br />
-        <button class="finalizar" onclick="fincuest()">enviar</button>
+        <div class="bg-boton">
+          <button id="fincuest" class="boton">enviar</button>
+        </div>
+        
       </section>
+
       <section class="temporizador">
         <div class="bakchelp">
           <div class="temp">
@@ -95,19 +120,26 @@
             </div>
           </div>
         </div>
-        <button class="finalizar" onclick="reiniciar()">
+        <div class="bg-boton">
+        <button class="boton" id="reiniciar" onclick="reiniciar()">
           Volver a intentar
         </button>
+      </div>
+      <p class="tryuser">Responde todas las preguntas en 30 segundos!</p>
+      <p class="gratefoul">
+        Creado con &#128420; por
+        <a
+          rel="noopener"
+          style="text-decoration: none"
+          target="_blank"
+          href="https://github.com/LuisD3vv"
+          ><span>LissandroD3v.</span></a
+        >
+      </p>
       </section>
     </div>
-    <p class="gratefoul">
-      Creado con &#128420; por
-      <a
-        style="text-decoration: none"
-        target="_blank"
-        href="https://github.com/LuisD3vv"
-        ><span>LissandroD3v.</span></a
-      >
-    </p>
+  
+    <script src="script.js"></script>
+    <!--Javascript relink-->
   </body>
 </html>
