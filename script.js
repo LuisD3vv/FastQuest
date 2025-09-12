@@ -5,6 +5,10 @@ const regresiva = setInterval(() => {
   tiempo--;
   elementotempo.textContent = tiempo;
 
+  if (tiempo==5) {
+    elementotempo.style.color = "red";
+  }
+
   if (tiempo <= 0) {
     clearInterval(regresiva); // parar el intervalo
     elementotempo.textContent = "Se acabo!";
@@ -16,7 +20,15 @@ const regresiva = setInterval(() => {
 
 //Mostrar en pantalla las repuestas y la fecha de hoy
 
+function preguntas() {
+  /*
+  Aqui haremoos un array de preguntas cortas para hacer mas variado el programa..
+  */
+  let arrayPreguntas=[];
+}
+
 function fincuest() {
+  console.log("me has presionado");
   let repuesta1 = document.getElementById("pre1").value;
   let repuesta2 = document.getElementById("pre2").value;
   let repuesta3 = document.getElementById("pre3").value;
@@ -25,13 +37,7 @@ function fincuest() {
 
   const fecha = new Date(); // Crear el objeto date de donde extraeremos la fecha y hora
 
-  /*
-  let horas = fecha.getHours(); // Transformar en  y colocarle la propiedad string.padstart(2, "0")
-  let minutos = fecha.getMinutes();
-  let segundos = fecha.getSeconds();
-  */
 
-  let dia_hoy = fecha.toLocaleDateString("es-mx"); // Fecha local
 
   //Si las respuestas estan vacias.
   if (!repuesta1 || !repuesta2 || !repuesta3 || !repuesta4 || !repuesta5) {
@@ -57,17 +63,22 @@ function fincuest() {
         " Fecha de hoy " +
         dia_hoy
     );
+  console.log("funcion")
+
   }
 
   //Pausar el tiempo si el boton es presionado (si las repuestas fueron introducidas)
   if (repuesta1 || repuesta2 || repuesta3 || repuesta4 || repuesta5 != null) {
-    alert("Cuenta regresiva pausada");
+    alert("Cuenta regresiva pausada.");
     clearInterval(regresiva); // detener conteo cuando se contesten todas
     return;
   }
 }
 ("\n");
 //reiniciar el navegador cuando se precione el boton intentar de nuevo
+
+
+
 function reiniciar() {
   alert("Juego Reiniciado");
   location.reload(); // se logra con esto
