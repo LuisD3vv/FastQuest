@@ -281,7 +281,7 @@ input {
 }
 
 .title {
-  width: 50%;
+  width: min(50rem,95%);
   margin: 1rem auto;
   text-align: center;
 background: linear-gradient(90deg,lightblue,lightcoral);
