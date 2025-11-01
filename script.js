@@ -1,7 +1,6 @@
 let tiempo = 31;
 let regresiva;
 function iniciarTemporizador() {
-  
   regresiva = setInterval(() => {
     let elementoAlarma = document.getElementById("audioAlarma");
     let elementotempo = document.getElementById("tempo");
@@ -14,68 +13,96 @@ function iniciarTemporizador() {
       clearInterval(regresiva); // parar el intervalo
       elementotempo.textContent = "Se acabo!";
       elementotempo.style.color = "red";
-
       elementoAlarma.play();
       alert("Game over");
     }
   }, 1000);
+  alert("Tiempo iniciado!!");
 }
+
+function crearBotones () {
+  let boton1 = document.createElement("BUTTON");
+  let boton2 = document.createElement("BUTTON");
+  
+  boton1.classList.add("boton");
+  boton1.textContent = "Reintentar";
+  boton1.setAttribute("id","reiniciar");
+
+  boton2.classList.add("boton");
+  boton2.textContent = "Terminar";
+  boton2.setAttribute("id","fincuest");
+
+  boton1.addEventListener('click',()=>{
+      reiniciar();
+    })
+    boton2.addEventListener('click',()=>{
+      fincuest();
+    })
+
+  contenedor.append(boton1, boton2);
+}
+
 // simulando un media querie, mala practica, pero por el momento es lo mas optimo
 const media = window.matchMedia("(max-width: 40rem)");
-function agregarBotones(e) {
-  if (e.matches) {
-    let agregar = document.querySelector('.contenedor');
-    let boton1 = document.createElement('BUTTON');
-    let boton2 = document.createElement('BUTTON');
-    boton1.classList.add('boton');
-    boton1.textContent = 'Reintentar'
-    boton2.classList.add('boton');
-    boton2.textContent = 'Terminar'
-    let contenedor = document.createElement('DIV');
-    contenedor.classList.add('contenedor_mediacel')
-    contenedor.append(boton1,boton2);
-    agregar.append(contenedor);
+let contenedor = document.createElement("DIV");
+contenedor.classList.add("contenedor_mediacel");
+let agregar = document.querySelector('.contenedor');
+
+function agregarBotones(e) {  
+  if (!e.matches) {
+    if(document.body.contains(contenedor)) contenedor.remove();
   }
-}
-media.addEventListener("change",agregarBotones);
+  else {
+    if(!document.body.contains(contenedor));
+    crearBotones();
+    agregar.appendChild(contenedor);
+  }
+    // Se agrega el evento antes de insertarlo para que el elemento este viculado al objeto y no al DOM
+   
+
+  } 
+media.addEventListener("change", agregarBotones);
+
 
 function fincuest() {
   const fecha = new Date(); // Crear el objeto date de donde extraeremos la fecha y hora
   // comprobar todos los campos
   let respuestas = [];
-  let impresion = ""
+  let impresion = "";
   document.querySelectorAll("input[name='pre']").forEach((e) => {
-    respuestas.push(e.value); 
+    respuestas.push(e.value);
   });
 
-  let vacio = 0
-  respuestas.forEach(e=>{
-    if (e == '') {
-      vacio ++
+  let vacio = 0;
+  respuestas.forEach((e) => {
+    if (e == "") {
+      vacio++;
     }
-  })
-  const opcionesinValidas = [1,2,3,4,5,6];
+  });
+  const opcionesinValidas = [1, 2, 3, 4, 5, 6];
   if (opcionesinValidas.includes(vacio)) {
-    alert('Debes ingresar todas las respuestas');
+    alert("Debes ingresar todas las respuestas");
     return;
-  }
-  else {
-    respuestas.forEach((e) => {
+  } else {
+    respuestas.forEach(e => {
       if (e) {
-        impresion += `Respuesta ${e}\n`;
+        impresion += `Repuesta: ${e}\n`;
       }
     });
   }
   alert("tiempo pausado");
-  clearInterval(regresiva)
-  alert(`Aqui las repuestas\nFecha\n${fecha.toDateString("es-mx")}\n${impresion}`);
+  clearInterval(regresiva);
+  alert(
+    `Aqui las repuestas\nFecha${fecha.toDateString("es-mx")}\n${impresion}`
+  );
 }
 function reiniciar() {
   alert("Juego Reiniciado");
   location.reload(); // se logra con esto
 }
-let boton = document.querySelector('#startemp');
-boton.addEventListener('click',( )=>{
-iniciarTemporizador();
-agregarBotones(media);
-})
+
+let boton = document.querySelector("#startemp");
+boton.addEventListener("click", () => {
+  iniciarTemporizador();
+  agregarBotones(media);
+});
