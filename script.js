@@ -105,4 +105,4 @@ let boton = document.querySelector("#startemp");
 boton.addEventListener("click", () => {
   iniciarTemporizador();
   agregarBotones(media);
-});
+},{once:true});
