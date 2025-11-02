@@ -244,13 +244,15 @@ span {
     border-radius: 2rem;
   }
   #startemp {
+    display: flex;
+    justify-content: center;
     height: 100%;
     padding: 2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     width: 100%;
-    font-size: 1.8rem;
-    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    border-radius: .5rem;
   }
   .reinicio,
   .fin {
